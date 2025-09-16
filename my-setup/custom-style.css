@@ -38,9 +38,9 @@
 }
 
 /* Hide the ">" chevron icon */
-.codicon-tree-item-expanded:before {
+/* .codicon-tree-item-expanded:before {
   display: none !important;
-}
+} */
 
 /* List item label name */
 .monaco-list.list_id_1 .monaco-list-row.selected .label-name {
@@ -49,9 +49,9 @@
 }
 
 /* File explorer action buttons */
-.monaco-workbench .part.sidebar .title-actions .actions-container {
+/* .monaco-workbench .part.sidebar .title-actions .actions-container {
   display: none;
-}
+} */
 
 /* File Explorer Item Label */
 .monaco-tree .monaco-tree-row .label-name,
@@ -59,7 +59,7 @@
   font-family: "Geist Mono", monospace !important;
   font-size: 14px !important;
   font-weight: 400 !important;
-  color: #fff !important;
+  /* color: #fff !important; */
 }
 
 .explorer-item-edited {
@@ -261,6 +261,13 @@
   color: rgba(255, 255, 255, 0.3) !important;
 }
 
+.monaco-workbench .codicon[class*="codicon-"],
+.monaco-icon-label::before {
+  color: inherit !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
 /* Container that holds the VS Code home icon. */
 .editor-group-watermark {
   max-width: none !important;
@@ -272,4 +279,13 @@
   background-position: center center !important;
   background-size: contain !important;
   width: 60% !important;
+}
+
+.statusbar-item[aria-label*="Vim"] {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  color: #ffcc00 !important;
+  background: #1e1e1e !important;
+  padding: 0 10px !important;
+  border-top: 2px solid #ffcc00 !important;
 }
